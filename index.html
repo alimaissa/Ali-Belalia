@@ -1,149 +1,115 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Ali Belalia | Developer</title>
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: 'Segoe UI', sans-serif;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+    body {background:#0b0f19;color:#fff;}header {
+  display:flex;justify-content:space-between;align-items:center;
+  padding:20px 80px;
 }
 
-body{
-    background:#0d1117;
-    color:#c9d1d9;
+header h2 {font-weight:600;}
+
+nav a {
+  margin-left:25px;text-decoration:none;color:#aaa;transition:0.3s;
 }
 
-/* Container */
-.container{
-    max-width:900px;
-    margin:auto;
-    padding:40px 20px;
+nav a:hover {color:#fff;}
+
+.hero {
+  display:flex;justify-content:space-between;align-items:center;
+  padding:100px 80px;
 }
 
-/* Header */
-.header{
-    display:flex;
-    align-items:center;
-    gap:20px;
+.hero-text h1 {
+  font-size:48px;margin-bottom:20px;
 }
 
-.header img{
-    width:100px;
-    border-radius:50%;
-    border:2px solid #30363d;
+.hero-text span {color:#4f46e5;}
+
+.hero-text p {color:#aaa;margin-bottom:20px;}
+
+.btn {
+  padding:12px 25px;background:#4f46e5;border:none;border-radius:8px;
+  color:white;cursor:pointer;
 }
 
-.header h1{
-    font-size:28px;
-    color:#58a6ff;
+.hero img {
+  width:300px;border-radius:20px;
 }
 
-.header p{
-    color:#8b949e;
+.section {padding:80px;}
+
+.section h2 {margin-bottom:40px;font-size:32px;}
+
+.skills {
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+  gap:20px;
 }
 
-/* Sections */
-.section{
-    margin-top:40px;
+.skill {
+  background:#111827;padding:20px;text-align:center;border-radius:10px;
 }
 
-.section h2{
-    margin-bottom:15px;
-    color:#58a6ff;
+.projects {
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
 }
 
-/* Skills */
-.skills span{
-    display:inline-block;
-    background:#161b22;
-    padding:8px 12px;
-    margin:5px;
-    border-radius:6px;
-    border:1px solid #30363d;
+.card {
+  background:#111827;padding:20px;border-radius:12px;
+  transition:0.3s;
 }
 
-/* Links */
-.links a{
-    display:inline-block;
-    margin:10px 10px 0 0;
-    padding:10px 15px;
-    border-radius:6px;
-    text-decoration:none;
-    color:white;
-    background:#238636;
-    transition:0.3s;
+.card:hover {transform:translateY(-5px);}
+
+footer {
+  text-align:center;padding:30px;color:#777;
 }
 
-.links a:hover{
-    background:#2ea043;
+@media(max-width:768px){
+  .hero {flex-direction:column;text-align:center;}
+  .hero img {margin-top:30px;}
+  header {padding:20px;}
+  .section {padding:40px;}
 }
 
-/* Card effect */
-.card{
-    background:#161b22;
-    padding:20px;
-    border-radius:10px;
-    border:1px solid #30363d;
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 0 20px rgba(88,166,255,0.2);
-}
-</style>
+  </style>
 </head>
-
-<body>
-
-<div class="container">
-
-    <!-- Header -->
-    <div class="header card">
-        <img src="https://via.placeholder.com/150">
-        <div>
-            <h1>Ali Belalia</h1>
-            <p>Developer | Tech Enthusiast</p>
-        </div>
-    </div>
-
-    <!-- About -->
-    <div class="section card">
-        <h2>About Me</h2>
-        <p>
-            Passionate developer focused on building modern digital experiences.
-            I love technology, coding, and creating useful content.
-        </p>
-    </div>
-
-    <!-- Skills -->
-    <div class="section card">
-        <h2>Skills</h2>
-        <div class="skills">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-            <span>UI Design</span>
-            <span>Content Creation</span>
-        </div>
-    </div>
-
-    <!-- Links -->
-    <div class="section card">
-        <h2>Connect</h2>
-        <div class="links">
-            <a href="https://instagram.com/httpx.alibel">Instagram</a>
-            <a href="https://facebook.com/httpx.alibel">Facebook</a>
-            <a href="https://tiktok.com/httpx.alibel">TikTok</a>
-            <a href="https://wa.me/213676933224">WhatsApp</a>
-        </div>
-    </div>
-
-</div>
-
-</body>
+<body><header>
+  <h2>Ali.dev</h2>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Projects</a>
+    <a href="#">Contact</a>
+  </nav>
+</header><section class="hero">
+  <div class="hero-text">
+    <h1>Hello, I'm <span>Ali</span></h1>
+    <p>Frontend Developer passionate about building modern websites.</p>
+    <button class="btn">Hire Me</button>
+  </div>
+  <img src="https://via.placeholder.com/300" alt="profile">
+</section><section class="section">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="skill">HTML</div>
+    <div class="skill">CSS</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">React</div>
+  </div>
+</section><section class="section">
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="card">Project One</div>
+    <div class="card">Project Two</div>
+    <div class="card">Project Three</div>
+  </div>
+</section><footer>
+  <p>© 2026 Ali - All rights reserved</p>
+</footer></body>
 </html>
